@@ -132,7 +132,9 @@
     <None Include="resources\caballero_negro_60_px-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\horse-fast-gallop-corto.wav" />
+    <Content Include="resources\horse-fast-gallop - short2.wav" />
+    <Content Include="resources\Ta Da-.wav" />
+    <None Include="resources\llegada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

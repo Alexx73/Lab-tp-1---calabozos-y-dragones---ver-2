@@ -139,5 +139,15 @@ namespace Lab_tp_1___calabozos_y_dragones.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llegada {
+            get {
+                object obj = ResourceManager.GetObject("llegada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

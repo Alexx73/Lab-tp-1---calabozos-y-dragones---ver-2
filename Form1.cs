@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
+
+
 
 namespace Lab_tp_1___calabozos_y_dragones
 {
@@ -40,7 +43,7 @@ namespace Lab_tp_1___calabozos_y_dragones
         {
             InitializeComponent();
 
-
+            
 
             // posicionar picturebox inicial
 
@@ -62,14 +65,16 @@ namespace Lab_tp_1___calabozos_y_dragones
                 caballeros[i].Visible = false;
             }
 
+            // Asigna un título a la ventana de la aplicación
+            this.Text = "Calabozos y Dragones";
 
 
-           // Establece la nueva posición
-           caballeros[0].Location = new Point(caballeroRojoX, caballeroRojoY);
+            // Establece la nueva posición
+            caballeros[0].Location = new Point(caballeroRojoX, caballeroRojoY);
             pbCaballeroRojo.BackColor = Color.Transparent;
             pbDragonRojo.Location = new Point(dragonRojoX, dragonRojoY);
 
-            // dragones Ocultos
+            // Ocultar dragones 
             pbDragonRojo.Visible = false;
             pbDragonRojo2.Visible = false;
             pbDragonVerde.Visible = false;
@@ -81,12 +86,8 @@ namespace Lab_tp_1___calabozos_y_dragones
 
             // Tamaño de cada cuadrícula
             int gridSize = 50;
-
-            // Cambia el color de fondo del Panel a rojo
-          
-
-
-            // Número de cuadrículas por fila y columna
+      
+                    // Número de cuadrículas por fila y columna
             int numCols = 10;
             int numRows = 5;
 
@@ -117,13 +118,6 @@ namespace Lab_tp_1___calabozos_y_dragones
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            int tamanoCuadricula = 40;
-
-            // Cambiar el tamaño de las cuadrículas dentro del Panel
-            panelTablero.Margin = new Padding(tamanoCuadricula, tamanoCuadricula, tamanoCuadricula, tamanoCuadricula); // Ajusta los valores según tus necesidades
-        }
 
         private void btnAvanzar_Click(object sender, EventArgs e)
         {
@@ -150,12 +144,12 @@ namespace Lab_tp_1___calabozos_y_dragones
             // Calcula la nueva posición del PictureBox
             caballeroVerdeX = pBCaballeroVerde.Left + (50);
             dragonVerdeX = caballeroVerdeX;
-           
+
 
             if (caballeroVerdeX >= 450) caballeroVerdeX = 450;
 
             // Establece la nueva posición
-            pBCaballeroVerde.Location = new Point(caballeroVerdeX,caballeroVerdeY );
+            pBCaballeroVerde.Location = new Point(caballeroVerdeX, caballeroVerdeY);
             pbDragonVerde.Location = new Point(dragonVerdeX, dragonVerdeY);
 
         }
@@ -233,9 +227,18 @@ namespace Lab_tp_1___calabozos_y_dragones
                     caballeroRojoX = ancho * columna;
                     caballeroRojoY = alto * fila;
 
+                    // object creation and path selection
+                    SoundPlayer horses = new SoundPlayer(@"C:\Users\Alexx\Documents\TUP 2023 - cuat 2\05 - LABORATORIO 2\tp1 - ber\Lab-tp-1---calabozos-y-dragones-master-main\resources\horse-fast-gallop - short2.wav");
+
+                    // apply the method to play sound
+                    horses.Play();
+
+                    //Thread.Sleep(500);
                     // esta linea mueve a los jugadores, loopea el arreglo de picturebox, donde estan los caballeros
                     caballeros[n].Location = new Point(caballeroRojoX , caballeroRojoY);
-                    SystemSounds.Beep.Play();
+                   // SystemSounds.Beep.Play(); 
+                    //SystemSounds.Asterisk.Play();
+                   
 
                     //FIN GRAFICOS
 
@@ -250,6 +253,9 @@ namespace Lab_tp_1___calabozos_y_dragones
             }
             else
             {
+                SoundPlayer winner = new SoundPlayer(@"C:\Users\Alexx\Documents\TUP 2023 - cuat 2\05 - LABORATORIO 2\tp1 - ber\Lab-tp-1---calabozos-y-dragones-master-main\resources\Ta Da-.wav");
+
+                winner.Play();
                 MessageBox.Show("Finalizó!");
 
                 for (int n = 0; n < nuevo.Tablero.CantidadJugadores; n++)

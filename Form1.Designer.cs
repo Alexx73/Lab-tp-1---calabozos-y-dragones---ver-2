@@ -30,62 +30,44 @@ namespace Lab_tp_1___calabozos_y_dragones
         private void InitializeComponent()
         {
             this.panelTablero = new System.Windows.Forms.Panel();
-            this.btnAvanzar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnJugar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.lbResultados = new System.Windows.Forms.ListBox();
             this.btnHistorial = new System.Windows.Forms.Button();
-            this.pbDragonRojo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pBCaballeroVerde = new System.Windows.Forms.PictureBox();
             this.pbCaballeroRojo = new System.Windows.Forms.PictureBox();
             this.pbCaballeroNegro = new System.Windows.Forms.PictureBox();
             this.pbCaballeroAzul = new System.Windows.Forms.PictureBox();
             this.pbDragonRojo2 = new System.Windows.Forms.PictureBox();
             this.pbDragonVerde2 = new System.Windows.Forms.PictureBox();
+            this.pbDragonRojo = new System.Windows.Forms.PictureBox();
             this.pbDragonVerde = new System.Windows.Forms.PictureBox();
             this.panelTablero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCaballeroVerde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroRojo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroNegro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAzul)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonVerde2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonVerde)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTablero
             // 
+            this.panelTablero.Controls.Add(this.pictureBox1);
             this.panelTablero.Controls.Add(this.pbCaballeroNegro);
             this.panelTablero.Controls.Add(this.pbCaballeroAzul);
             this.panelTablero.Controls.Add(this.pbDragonRojo2);
             this.panelTablero.Controls.Add(this.pbDragonVerde2);
+            this.panelTablero.Controls.Add(this.pbDragonRojo);
             this.panelTablero.Controls.Add(this.pbDragonVerde);
             this.panelTablero.Location = new System.Drawing.Point(2, 12);
             this.panelTablero.Name = "panelTablero";
             this.panelTablero.Size = new System.Drawing.Size(750, 346);
             this.panelTablero.TabIndex = 0;
-            // 
-            // btnAvanzar
-            // 
-            this.btnAvanzar.Location = new System.Drawing.Point(65, 390);
-            this.btnAvanzar.Name = "btnAvanzar";
-            this.btnAvanzar.Size = new System.Drawing.Size(100, 42);
-            this.btnAvanzar.TabIndex = 1;
-            this.btnAvanzar.Text = "Rojo";
-            this.btnAvanzar.UseVisualStyleBackColor = true;
-            this.btnAvanzar.Click += new System.EventHandler(this.btnAvanzar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(210, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 42);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Verde";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnJugar
             // 
@@ -127,15 +109,15 @@ namespace Lab_tp_1___calabozos_y_dragones
             this.btnHistorial.UseVisualStyleBackColor = true;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
-            // pbDragonRojo
+            // pictureBox1
             // 
-            this.pbDragonRojo.Image = global::Lab_tp_1___calabozos_y_dragones.Properties.Resources.dragon_rojo_60x60_bg;
-            this.pbDragonRojo.Location = new System.Drawing.Point(767, 308);
-            this.pbDragonRojo.Name = "pbDragonRojo";
-            this.pbDragonRojo.Size = new System.Drawing.Size(50, 50);
-            this.pbDragonRojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDragonRojo.TabIndex = 4;
-            this.pbDragonRojo.TabStop = false;
+            this.pictureBox1.Image = global::Lab_tp_1___calabozos_y_dragones.Properties.Resources.llegada;
+            this.pictureBox1.Location = new System.Drawing.Point(667, 245);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // pBCaballeroVerde
             // 
@@ -195,6 +177,16 @@ namespace Lab_tp_1___calabozos_y_dragones
             this.pbDragonVerde2.TabIndex = 6;
             this.pbDragonVerde2.TabStop = false;
             // 
+            // pbDragonRojo
+            // 
+            this.pbDragonRojo.Image = global::Lab_tp_1___calabozos_y_dragones.Properties.Resources.dragon_rojo_60x60_bg;
+            this.pbDragonRojo.Location = new System.Drawing.Point(316, 201);
+            this.pbDragonRojo.Name = "pbDragonRojo";
+            this.pbDragonRojo.Size = new System.Drawing.Size(50, 50);
+            this.pbDragonRojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDragonRojo.TabIndex = 4;
+            this.pbDragonRojo.TabStop = false;
+            // 
             // pbDragonVerde
             // 
             this.pbDragonVerde.Image = global::Lab_tp_1___calabozos_y_dragones.Properties.Resources.dragon_verde_60x60_bg;
@@ -214,22 +206,20 @@ namespace Lab_tp_1___calabozos_y_dragones
             this.Controls.Add(this.lbResultados);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnJugar);
-            this.Controls.Add(this.pbDragonRojo);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pBCaballeroVerde);
-            this.Controls.Add(this.btnAvanzar);
             this.Controls.Add(this.pbCaballeroRojo);
             this.Controls.Add(this.panelTablero);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelTablero.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCaballeroVerde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroRojo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroNegro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAzul)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonVerde2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonVerde)).EndInit();
             this.ResumeLayout(false);
 
@@ -239,9 +229,7 @@ namespace Lab_tp_1___calabozos_y_dragones
 
         private System.Windows.Forms.Panel panelTablero;
         private System.Windows.Forms.PictureBox pbCaballeroRojo;
-        private System.Windows.Forms.Button btnAvanzar;
         private System.Windows.Forms.PictureBox pBCaballeroVerde;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pbDragonRojo;
         private System.Windows.Forms.PictureBox pbDragonVerde;
         private System.Windows.Forms.PictureBox pbDragonRojo2;
@@ -252,6 +240,7 @@ namespace Lab_tp_1___calabozos_y_dragones
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.PictureBox pbCaballeroAzul;
         private System.Windows.Forms.PictureBox pbCaballeroNegro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
